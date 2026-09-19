@@ -2,7 +2,8 @@ fastapi
 uvicorn
 python-multipart
 pydantic
-sentence-transformers
+fastembed
 faiss-cpu
 pymupdf
 python-dotenv
+numpy

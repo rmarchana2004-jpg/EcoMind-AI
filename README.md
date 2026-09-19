@@ -80,3 +80,51 @@ For example:
 Organic Carbon = 0.6%
 Soil Moisture = 15%
 Land Use = Monoculture
+## 🗄️ Data Schema
+
+EcoMind AI uses structured environmental data to represent the conditions provided by the user.
+
+### Environmental Data
+
+| Field | Type | Description |
+|---|---|---|
+| `soil_ph` | float | Soil pH value |
+| `organic_carbon` | float | Soil organic carbon percentage |
+| `soil_moisture` | float | Soil moisture percentage |
+| `temperature` | float | Environmental temperature |
+| `rainfall` | float | Rainfall amount |
+| `land_use` | string | Land-use type such as monoculture, intercropping or agroforestry |
+| `species_richness` | integer | Number/measure of species richness |
+| `habitat_diversity` | float | Habitat diversity measure |
+| `pollution_level` | string | Pollution level |
+| `deforestation_level` | string | Deforestation level |
+| `region` | string | Geographic region |
+
+### Conversation Memory
+
+For each conversation session, EcoMind AI maintains:
+
+- Session ID
+- Environmental metrics provided by the user
+- Pending clarification field
+- Previous environmental context
+
+### Knowledge Base Metadata
+
+Each retrieved scientific chunk contains:
+
+- `text`
+- `page`
+- `filename`
+- Vector embedding used for semantic retrieval
+## 🔄 CI/CD
+
+The current version of EcoMind AI is maintained through GitHub and is configured for local development and manual deployment.
+
+- Source code is maintained in the GitHub repository.
+- The `main` branch contains the submitted version.
+- Python dependencies are defined in `backend/requirements.txt`.
+- The FastAPI backend is run using Uvicorn.
+- The frontend is served as HTML/CSS/JavaScript.
+- The current submission does not use an automated CI/CD deployment pipeline.
+- Future versions can add GitHub Actions for automated testing, validation and deployment.

@@ -1,11 +1,11 @@
-from sentence_transformers import SentenceTransformer
+from fastembed import TextEmbedding
+import numpy as np
 
+MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
-MODEL_NAME = "all-MiniLM-L6-v2"
-
-model = SentenceTransformer(MODEL_NAME)
+model = TextEmbedding(model_name=MODEL_NAME)
 
 
 def generate_embedding(text: str):
-    embedding = model.encode(text)
-    return embedding
+    embedding = next(model.embed([text]))
+    return np.array(embedding, dtype=np.float32)
