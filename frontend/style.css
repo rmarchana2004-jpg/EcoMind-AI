@@ -1,0 +1,770 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==========================================
+   BODY
+   ========================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef4ef;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   MAIN APP
+   ========================================== */
+
+.app {
+    max-width: 1100px;
+    margin: auto;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.header {
+    background: #1b5e20;
+    color: white;
+    padding: 25px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.header p {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+
+/* ==========================================
+   NEW CHAT BUTTON
+   ========================================== */
+
+.new-chat-button {
+    background: white;
+    color: #1b5e20;
+    border: 1px solid white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.new-chat-button:hover {
+    background: #e8f5e9;
+}
+
+
+/* ==========================================
+   CHAT CONTAINER
+   ========================================== */
+
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chat-box {
+    flex: 1;
+
+    padding: 25px;
+
+    overflow-y: auto;
+
+    min-height: 600px;
+}
+
+
+/* ==========================================
+   MESSAGES
+   ========================================== */
+
+.message {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+
+.message-content {
+    max-width: 90%;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    line-height: 1.6;
+}
+
+
+.message-content > strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+.bot {
+    justify-content: flex-start;
+}
+
+
+.bot .message-content {
+    background: #f1f8f2;
+    border: 1px solid #d8ead9;
+}
+
+
+.user {
+    justify-content: flex-end;
+}
+
+
+.user .message-content {
+    background: #dbeafe;
+}
+
+
+.message-text {
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   INPUT AREA
+   ========================================== */
+
+.input-area {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    border-top: 1px solid #ddd;
+
+    background: white;
+}
+
+
+textarea {
+    flex: 1;
+
+    resize: none;
+
+    padding: 14px;
+
+    border: 1px solid #bbb;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+}
+
+
+textarea:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+
+/* ==========================================
+   BUTTON
+   ========================================== */
+
+button {
+    padding: 12px 28px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2e7d32;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+    background: #1b5e20;
+}
+
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   SECTIONS
+   ========================================== */
+
+.section {
+    margin-top: 22px;
+
+    padding: 18px;
+
+    background: white;
+
+    border: 1px solid #dfe8df;
+
+    border-radius: 12px;
+}
+
+
+.section h3 {
+    color: #1b5e20;
+
+    margin-bottom: 15px;
+}
+
+
+.section ul {
+    padding-left: 22px;
+}
+
+
+.section li {
+    margin-bottom: 8px;
+}
+
+
+/* ==========================================
+   METRICS
+   ========================================== */
+
+.metrics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+
+    gap: 12px;
+}
+
+
+.metric-card {
+    padding: 14px;
+
+    background: #f4f8f4;
+
+    border-radius: 10px;
+
+    border: 1px solid #dce8dc;
+}
+
+
+.metric-name {
+    display: block;
+
+    font-size: 13px;
+
+    color: #666;
+
+    margin-bottom: 5px;
+}
+
+
+.metric-value {
+    font-size: 18px;
+
+    color: #1b5e20;
+}
+
+
+/* ==========================================
+   FINDINGS
+   ========================================== */
+
+.findings-list {
+    padding-left: 22px;
+}
+
+
+.findings-list li {
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================
+   RELATIONSHIPS
+   ========================================== */
+
+.relationship-card {
+    padding: 14px;
+
+    margin-bottom: 10px;
+
+    background: #f7faf7;
+
+    border-left: 4px solid #66bb6a;
+
+    border-radius: 6px;
+}
+
+
+.relationship-card strong {
+    color: #1b5e20;
+}
+
+
+.relationship-card p {
+    margin-top: 6px;
+}
+
+
+/* ==========================================
+   RECOMMENDATIONS
+   ========================================== */
+
+.recommendation-card {
+    display: flex;
+
+    gap: 14px;
+
+    padding: 16px;
+
+    margin-bottom: 14px;
+
+    background: #f4faf4;
+
+    border-left: 5px solid #2e7d32;
+
+    border-radius: 10px;
+}
+
+
+.recommendation-number {
+    width: 32px;
+
+    height: 32px;
+
+    min-width: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #2e7d32;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+
+.recommendation-content {
+    flex: 1;
+}
+
+
+.recommendation-content h4 {
+    color: #1b5e20;
+
+    margin-bottom: 10px;
+
+    line-height: 1.5;
+}
+
+
+.recommendation-content p {
+    margin-bottom: 7px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   RECOMMENDATION EVIDENCE
+   ========================================== */
+
+.recommendation-evidence {
+    margin-top: 18px;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce8dc;
+
+    border-left: 4px solid #66bb6a;
+}
+
+
+.recommendation-evidence > strong {
+    display: block;
+
+    color: #1b5e20;
+
+    margin-bottom: 10px;
+}
+
+
+.recommendation-evidence-item {
+    margin-top: 12px;
+
+    padding-top: 10px;
+
+    border-top: 1px solid #e1e1e1;
+}
+
+
+.recommendation-evidence-item:first-of-type {
+    border-top: none;
+
+    margin-top: 0;
+
+    padding-top: 0;
+}
+
+
+.recommendation-evidence-item p {
+    font-size: 13px;
+
+    color: #444;
+
+    line-height: 1.6;
+
+    margin-top: 7px;
+}
+
+
+/* ==========================================
+   EVIDENCE
+   ========================================== */
+
+.evidence-section {
+    background: #fafafa;
+}
+
+
+.evidence-intro {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+
+.evidence-card {
+    padding: 14px;
+
+    margin-bottom: 12px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+
+.evidence-source {
+    font-weight: bold;
+
+    color: #1b5e20;
+
+    margin-bottom: 8px;
+
+    overflow: hidden;
+}
+
+
+.evidence-source span {
+    float: right;
+
+    font-size: 13px;
+
+    color: #666;
+
+    font-weight: normal;
+}
+
+
+.evidence-card p {
+    font-size: 14px;
+
+    color: #444;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   CONFIDENCE
+   ========================================== */
+
+.confidence-section {
+    background: #f8fbf8;
+}
+
+
+.confidence-card {
+    margin-top: 5px;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background: #f4f8f4;
+
+    border: 1px solid #cbdccf;
+}
+
+
+.confidence-value {
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #1b5e20;
+
+    margin-bottom: 8px;
+}
+
+
+.confidence-card p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #555;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   UNCERTAINTY
+   ========================================== */
+
+.uncertainty {
+    background: #fffaf0;
+
+    border-color: #ead9ae;
+}
+
+
+.uncertainty h3 {
+    color: #8a6500;
+}
+
+
+/* ==========================================
+   CLARIFICATION
+   ========================================== */
+
+.clarification {
+    background: #f5f9ff;
+
+    border-color: #cdddf5;
+}
+
+
+.clarification h3 {
+    color: #245a9a;
+}
+
+
+/* ==========================================
+   ERROR
+   ========================================== */
+
+.error-message {
+    color: #b71c1c;
+
+    background: #ffebee;
+
+    padding: 12px;
+
+    border-radius: 8px;
+}
+
+
+/* ==========================================
+   AI RESPONSE
+   ========================================== */
+
+.ai-response {
+    margin-bottom: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+
+    .chat-box {
+        padding: 15px;
+
+        min-height: 500px;
+    }
+
+
+    .message-content {
+        max-width: 100%;
+    }
+
+
+    .input-area {
+        padding: 12px;
+
+        flex-direction: column;
+    }
+
+
+    button {
+        width: 100%;
+    }
+
+
+    .recommendation-card {
+        flex-direction: column;
+    }
+
+
+    .recommendation-number {
+        margin-bottom: 5px;
+    }
+
+
+    .evidence-source span {
+        float: none;
+
+        display: block;
+
+        margin-top: 4px;
+    }
+}
+/* ==================================================
+   KNOWLEDGE QUESTION
+   ================================================== */
+
+.knowledge-evidence-card {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fafafa;
+    border: 1px solid #e1e5e2;
+}
+
+.evidence-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e8e6;
+}
+
+.evidence-header strong {
+    font-size: 14px;
+    color: #26382d;
+}
+
+.evidence-header span {
+    font-size: 13px;
+    white-space: nowrap;
+    color: #66736b;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #eef2ef;
+}
+
+.evidence-text {
+    font-size: 13px;
+    line-height: 1.65;
+    color: #4a554e;
+}
+
+.evidence-intro {
+    font-size: 13px;
+    color: #68746c;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   KNOWLEDGE ANSWER
+   ================================================== */
+
+.ai-response {
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 600px) {
+
+    .evidence-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .knowledge-evidence-card {
+        padding: 12px;
+    }
+
+    .evidence-text {
+        font-size: 12px;
+    }
+}

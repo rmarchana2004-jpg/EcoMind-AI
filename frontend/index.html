@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoMind AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="header">
+
+            <div>
+                <h1>🌱 EcoMind AI</h1>
+                <p>Biodiversity Intelligence Assistant</p>
+            </div>
+
+            <button id="newChatButton" class="new-chat-button">
+                + New Chat
+            </button>
+
+        </header>
+
+
+        <main class="chat-container">
+
+            <div id="chatBox" class="chat-box">
+
+                <div class="message bot">
+                    <div class="message-content">
+                        <strong>EcoMind AI</strong>
+                        <p>
+                            Hello! I can analyze environmental conditions
+                            such as soil, rainfall, land use and biodiversity.
+                        </p>
+                        <p>
+                            Tell me about your environmental conditions
+                            and I will provide a scientific assessment.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="input-area">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Describe your environmental conditions..."
+                    rows="3"></textarea>
+
+                <button id="sendButton">
+                    Send
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
